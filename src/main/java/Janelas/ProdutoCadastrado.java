@@ -12,18 +12,20 @@ import Objetos.Produto;
  */
 public class ProdutoCadastrado extends javax.swing.JFrame {
 
+    private Cadastro c;
     /**
      * Creates new form ProdutoCadastrado
      */
     public ProdutoCadastrado() {
         initComponents();
     }
-    public ProdutoCadastrado(Produto p){
+    public ProdutoCadastrado(Produto p, Cadastro c){
         initComponents();
         jLNome.setText(p.getNome());
         jLDescricao.setText(p.getDescricao());
         jLQuantidade.setText(String.valueOf(p.getQuantidade()));
         jLPreco.setText(String.valueOf(p.getPreco()));
+        this.c = c;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -158,7 +160,7 @@ public class ProdutoCadastrado extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
-        
+        c.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

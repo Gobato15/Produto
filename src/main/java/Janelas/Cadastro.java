@@ -131,16 +131,17 @@ public class Cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        Produto p = new Produto(
-                jTNome.getText(),
-                jTDescricao.getText(),
-                Integer.parseInt(jTQuantidade.getText()),
-                Double.parseDouble(jTPreco.getText()));
-        
-        ProdutoCadastrado pc = new ProdutoCadastrado(p);
+        Produto p = new Produto();
+        p.setNome(jTNome.getText());
+        p.setDescricao(jTDescricao.getText());
+        p.setQuantidade(Integer.parseInt(jTQuantidade.getText()));
+        p.setPreco(Double.valueOf(jTPreco.getText()));
+
+        ProdutoCadastrado pc = new ProdutoCadastrado(p,this);
         pc.setVisible(true);
+        this.setVisible(false);
         pc.setLocationRelativeTo(this);
-        
+
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
     /**

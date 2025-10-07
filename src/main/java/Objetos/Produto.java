@@ -14,12 +14,6 @@ public class Produto {
     private int quantidade;
     private Double preco;
     
-    public Produto(String nome, String descricao, int quantidade, Double preco) {
-        setNome(nome);
-        setDescricao(descricao);
-        setQuantidade(quantidade);
-        setPreco(preco);
-    }
     /**
      * @return the nome
      */
